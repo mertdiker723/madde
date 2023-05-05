@@ -1,6 +1,6 @@
 // Components
 import Header from "../../components/Home/Header";
-import TabsContainer from "../../components/Home/Tabs";
+import CategorySlider from "../../components/Home/Categories";
 
 // Assets and Styles
 import "./Style.scss";
@@ -10,7 +10,7 @@ const Home = () => {
         <div className="header-container">
             {/* // error boundry kur */}
             <Header />
-            <TabsContainer />
+            <CategorySlider />
         </div>
     )
 }
