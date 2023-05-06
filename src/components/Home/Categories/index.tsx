@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 // Components
 import TotalActivities from '../TotalActivities';
+import FilterBox from './filter';
 // Material UI
 import { Box, Grid } from '@mui/material';
 //Common
@@ -44,10 +45,14 @@ const tabPanels: PanelValue[] = [
 const CategorySlider = () => {
     const [value, setValue] = useState(0);
 
+    const [showModal, setShowModal] = useState(true);
+
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
     };
+
     const { id, components } = tabPanels[value];
+
     return (
         <Box className="tab-container">
             <Box display="flex" justifyContent="center" width="100%">
@@ -58,13 +63,14 @@ const CategorySlider = () => {
                     <Grid container spacing={2}>
                         <Grid item xs={6} className='filtering-field'>
                             <img src={filterIcon} alt="filterIcon" />
-                            <div className='filters-button'>Filteler</div>
+                            <div className='filters-button' onClick={() => setShowModal(!showModal)}>Filteler</div>
                         </Grid>
                         <Grid item xs={6} className='calender-field'>
                             <img src={calender} alt="calender" />
                             <div className='calender-button'>Takvimde Gör</div>
                         </Grid>
                     </Grid>
+                    {showModal && <FilterBox />}
                 </div>
             </Box>
             {

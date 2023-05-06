@@ -1,0 +1,131 @@
+.activity-container-desktop {
+    max-width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #DEDEDE;
+    margin-top: 30px;
+    width: 1065px;
+    @media (max-width: 1200px) {
+        width: 960px;
+    }
+
+    .image-column {
+        position: relative;
+
+        .background-image {
+            background: black;
+            height: 100%;
+            width: 50%;
+        }
+
+        .image-self {
+            position: absolute;
+            right: 0;
+            top: 40px;
+            width: 280px;
+            object-fit: contain;
+            @media (max-width: 1200px) {
+                top: 50px;
+                width: 250px;
+            }
+        }
+    }
+
+    .right-column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .name-of-activity {
+            font-family: Acme;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+            user-select: none;
+            cursor: pointer;
+        }
+
+        .name-of-activity:hover {
+            color: #F19653;
+            transition: 0.5s;
+        }
+
+        .location-contain {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+
+            .location-of-activity {
+                font-family: GalanoGrotesqueRegular;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                color: #9C9C9C;
+                margin-left: 7px;
+            }
+        }
+
+        .description-of-card {
+            font-family: GalanoGrotesqueRegular;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #000000;
+            text-align: start;
+            margin-top: 10px;
+        }
+    }
+
+    .left-column {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .calender-contain {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px 15px 0px 0px;
+
+            .calender-add {
+                font-family: GalanoGrotesqueRegular;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                color: #000000;
+                margin-left: 5px;
+                user-select: none;
+                cursor: pointer;
+            }
+
+            .calender-add:hover {
+                color: #838383;
+                font-weight: 600;
+                transition: color 0.5s;
+            }
+        }
+
+        .MuiButton-root {
+            text-transform: none;
+            background-color: #FF0D87;
+            width: 70%;
+            font-family: GalanoGrotesqueRegular;
+            font-weight: 600;
+            border-radius: 0px;
+        }
+    }
+}
+
+.activity-container-desktop:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.5s;
+}

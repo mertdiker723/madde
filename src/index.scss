@@ -17,7 +17,24 @@
     font-family: GalanoGrotesqueRegular;
     src: url("./assets/fonts/galano/GalanoGrotesqueRegular.otf");
 }
+@font-face {
+    font-family: Acme;
+    src: url("./assets/fonts/acme/Acme-Regular.ttf");
+}
 
 * {
     margin: 0;
+}
+
+.mt-1{
+    margin-top: 10px;
+}
+.mt-2{
+    margin-top: 20px;
+}
+.mt-3{
+    margin-top: 30px;
+}
+.mt-4{
+    margin-top: 40px;
 }
