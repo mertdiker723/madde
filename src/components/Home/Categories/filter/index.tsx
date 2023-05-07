@@ -1,17 +1,14 @@
-import { useEffect } from "react";
+
+// Common
 import CheckboxCustom from "../../../../common/Checkbox"
+// Mock data
 import { activeLocation } from "../../../../db-temporary"
+
 import { InitialContext, useDataState } from "../../../../screen/Home/homeData";
+// Style And Assets
 import "./Style.scss"
 const FilterBox = () => {
-    const { state, onChangeHander } = useDataState() as InitialContext;
-
-    useEffect(() => {
-        onChangeHander({ id: 1, name: "asd" })
-    }, [])
-
-    console.log(state);
-
+    const { onChangeHander } = useDataState() as InitialContext;
 
     return (
         <div className="filter-container">
@@ -21,7 +18,7 @@ const FilterBox = () => {
                 {
                     activeLocation.map(active => {
                         const { id, name } = active;
-                        return <CheckboxCustom key={id} label={name} />
+                        return <CheckboxCustom key={id} label={name} onChange={onChangeHander} value={active} />
                     })
                 }
             </div>

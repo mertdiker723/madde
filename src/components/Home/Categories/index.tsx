@@ -45,7 +45,7 @@ const tabPanels: PanelValue[] = [
 const CategorySlider = () => {
     const [value, setValue] = useState(0);
 
-    const [showModal, setShowModal] = useState(true);
+    const [showModal, setShowModal] = useState(false);
 
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
@@ -63,7 +63,7 @@ const CategorySlider = () => {
                     <Grid container spacing={2}>
                         <Grid item xs={6} className='filtering-field'>
                             <img src={filterIcon} alt="filterIcon" />
-                            <div className='filters-button' onClick={() => setShowModal(!showModal)}>Filteler</div>
+                            <div className='filters-button' onClick={() => setShowModal(!showModal)}>Filtreler</div>
                         </Grid>
                         <Grid item xs={6} className='calender-field'>
                             <img src={calender} alt="calender" />

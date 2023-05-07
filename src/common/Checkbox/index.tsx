@@ -7,7 +7,12 @@ import CheckboxProps from './type';
 // Style and Assets
 import "./Style.scss"
 
-const CheckboxCustom = ({ label, customClassName, disabled }: CheckboxProps) => {
+const CheckboxCustom = ({ label, customClassName, disabled, onChange, value }: CheckboxProps) => {
+    const onChangeHander = (event: React.ChangeEvent<HTMLInputElement>) => {
+        if (onChange) {
+            onChange(event, value);
+        }
+    }
     return (
         <div className={customClassName}>
             <FormControlLabel
@@ -15,6 +20,7 @@ const CheckboxCustom = ({ label, customClassName, disabled }: CheckboxProps) => 
                 control={
                     <Checkbox
                         disabled={disabled}
+                        onChange={onChangeHander}
                         sx={{
                             color: "#DEDEDE",
                             '&.Mui-checked': {

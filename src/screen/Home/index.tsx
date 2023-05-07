@@ -10,7 +10,6 @@ const Home = () => {
     return (
         <ContextProvider>
             <div className="header-container">
-                {/* // error boundry kur */}
                 <Header />
                 <CategorySlider />
             </div>

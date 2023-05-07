@@ -3,7 +3,12 @@
     background: #FFFFFF;
     border: 1px solid #DEDEDE;
     margin-top: 30px;
-    width: 1065px;
+    width: 1365px;
+
+    @media (max-width: 1400px) {
+        width: 1150px;
+    }
+
     @media (max-width: 1200px) {
         width: 960px;
     }
@@ -20,12 +25,18 @@
         .image-self {
             position: absolute;
             right: 0;
-            top: 40px;
-            width: 280px;
+            top: 30px;
+            width: 315px;
             object-fit: contain;
+
+            @media (max-width: 1400px) {
+                top: 34px;
+                width: 300px;
+            }
+
             @media (max-width: 1200px) {
-                top: 50px;
-                width: 250px;
+                top: 45px;
+                width: 257px;
             }
         }
     }
