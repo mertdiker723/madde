@@ -6,6 +6,7 @@ type CheckboxProps = {
     disabled?: boolean;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>, item?: ActiveLocationModal) => void;
     value?: ActiveLocationModal;
+    checked?: boolean;
 }
 
 export default CheckboxProps;

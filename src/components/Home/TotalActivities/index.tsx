@@ -39,7 +39,18 @@ const TotalActivities = () => {
                 }
             </div>
             <div className="mobile-activity">
-                <ActivityMobile />
+                {
+                    filteredData.map(item => {
+                        const { id, description, imgRoute, title } = item;
+                        return <ActivityMobile
+                            key={id}
+                            id={id}
+                            description={description}
+                            imgRoute={imgRoute}
+                            title={title}
+                        />
+                    })
+                }
             </div>
         </div>
     )

@@ -1,3 +1,91 @@
-.activity-container-mobile{
+.activity-container-mobile {
+    text-align: center;
+    max-width: 500px;
 
+    .background-image {
+        background-color: #000000;
+        height: 212px;
+        position: relative;
+
+        .image-url {
+            position: absolute;
+            z-index: 1;
+            top: 150px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @media (max-width: 375px) {
+                width: 230px;
+                top: 165px;
+            }
+        }
+    }
+
+    .text-container {
+        margin-top: 38px;
+
+        .title-card {
+            font-family: GalanoGrotesqueBold;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+            user-select: none;
+            cursor: pointer;
+        }
+
+        .description-card {
+            font-family: GalanoGrotesqueRegular;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #000000;
+            text-align: start;
+        }
+
+        .down-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+
+
+            .calender-contain {
+                display: flex;
+                align-items: center;
+                margin: 5px 15px 0px 0px;
+
+                .calender-add {
+                    font-family: GalanoGrotesqueRegular;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: #000000;
+                    margin-left: 5px;
+                    user-select: none;
+                    cursor: pointer;
+                }
+
+                .calender-add:hover {
+                    color: #838383;
+                    font-weight: 600;
+                    transition: color 0.5s;
+                }
+            }
+
+            .MuiButton-root {
+                text-transform: none;
+                background-color: #FF0D87;
+                width: 50%;
+                font-family: GalanoGrotesqueRegular;
+                font-weight: 600;
+                border-radius: 0px;
+            }
+        }
+    }
 }

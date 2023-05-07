@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 // Components
 import TotalActivities from '../TotalActivities';
-import FilterBox from './filter';
+import FilterBox from './filterModal';
 // Material UI
 import { Box, Grid } from '@mui/material';
 //Common

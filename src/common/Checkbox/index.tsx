@@ -7,7 +7,7 @@ import CheckboxProps from './type';
 // Style and Assets
 import "./Style.scss"
 
-const CheckboxCustom = ({ label, customClassName, disabled, onChange, value }: CheckboxProps) => {
+const CheckboxCustom = ({ label, customClassName, disabled, onChange, value, checked }: CheckboxProps) => {
     const onChangeHander = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (onChange) {
             onChange(event, value);
@@ -21,6 +21,7 @@ const CheckboxCustom = ({ label, customClassName, disabled, onChange, value }: C
                     <Checkbox
                         disabled={disabled}
                         onChange={onChangeHander}
+                        checked={checked}
                         sx={{
                             color: "#DEDEDE",
                             '&.Mui-checked': {

@@ -1,4 +1,3 @@
-
 // Common
 import CheckboxCustom from "../../../../common/Checkbox"
 // Mock data
@@ -8,7 +7,7 @@ import { InitialContext, useDataState } from "../../../../screen/Home/homeData";
 // Style And Assets
 import "./Style.scss"
 const FilterBox = () => {
-    const { onChangeHander } = useDataState() as InitialContext;
+    const { state, onChangeHander } = useDataState() as InitialContext;
 
     return (
         <div className="filter-container">
@@ -18,7 +17,7 @@ const FilterBox = () => {
                 {
                     activeLocation.map(active => {
                         const { id, name } = active;
-                        return <CheckboxCustom key={id} label={name} onChange={onChangeHander} value={active} />
+                        return <CheckboxCustom checked={Boolean(state.find(item => item.id === id))} key={id} label={name} onChange={onChangeHander} value={active} />
                     })
                 }
             </div>
