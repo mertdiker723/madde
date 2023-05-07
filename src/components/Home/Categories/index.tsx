@@ -61,9 +61,11 @@ const CategorySlider = () => {
             <Box className="box-under-tabs">
                 <div className='container'>
                     <Grid container spacing={2}>
-                        <Grid item xs={6} className='filtering-field'>
-                            <img src={filterIcon} alt="filterIcon" />
-                            <div className='filters-button' onClick={() => setShowModal(!showModal)}>Filtreler</div>
+                        <Grid item xs={6}>
+                            <div className='filtering-field' onClick={() => setShowModal(!showModal)}>
+                                <img src={filterIcon} alt="filterIcon" className='filtering-icon' />
+                                <div className='filters-button'>Filtreler</div>
+                            </div>
                         </Grid>
                         <Grid item xs={6} className='calender-field'>
                             <img src={calender} alt="calender" />
