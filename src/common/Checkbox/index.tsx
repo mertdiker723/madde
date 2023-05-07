@@ -7,13 +7,14 @@ import CheckboxProps from './type';
 // Style and Assets
 import "./Style.scss"
 
-const CheckboxCustom = ({ label, customClassName }: CheckboxProps) => {
+const CheckboxCustom = ({ label, customClassName, disabled }: CheckboxProps) => {
     return (
         <div className={customClassName}>
             <FormControlLabel
                 label={<div className='checkbox-label'>{label}</div>}
                 control={
                     <Checkbox
+                        disabled={disabled}
                         sx={{
                             color: "#DEDEDE",
                             '&.Mui-checked': {

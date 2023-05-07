@@ -1,7 +1,18 @@
+import { useEffect } from "react";
 import CheckboxCustom from "../../../../common/Checkbox"
 import { activeLocation } from "../../../../db-temporary"
+import { InitialContext, useDataState } from "../../../../screen/Home/homeData";
 import "./Style.scss"
 const FilterBox = () => {
+    const { state, onChangeHander } = useDataState() as InitialContext;
+
+    useEffect(() => {
+        onChangeHander({ id: 1, name: "asd" })
+    }, [])
+
+    console.log(state);
+
+
     return (
         <div className="filter-container">
             <div className="activity-filter-first">
@@ -16,8 +27,8 @@ const FilterBox = () => {
             </div>
             <div className="activity-filter-second">
                 <div className="filter-header">Etkinlik Tarihi</div>
-                <CheckboxCustom label="Güncel Etkinlik" customClassName="mt-1" />
-                <CheckboxCustom label="Geçmiş Etkinlik" />
+                <CheckboxCustom disabled label="Güncel Etkinlik" customClassName="mt-1" />
+                <CheckboxCustom disabled label="Geçmiş Etkinlik" />
             </div>
         </div>
     )
